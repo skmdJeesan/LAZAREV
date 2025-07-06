@@ -323,3 +323,62 @@ nav {
 .elem-left h2 {font-weight: 400;}
 .elem-right {display: flex; align-items: center; gap: 3vh;}
 .elem-right p {font-size: 1.8vh; color: #6e6d6d;}
+
+.page3 {
+  height: 100vh;
+  width: 100%;
+  background-color: #222;
+  background-image: url(https://lazarev.kiev.ua/la24/reel-cover.webp);
+  /* background-size: contain; */
+  background-position: bottom;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.page3-center {
+  height: 8vw;
+  width: 10vw;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2vw;
+  flex-direction: column;
+}
+
+.page3-center i {
+  color: #111;
+  background-color: #fff;
+  padding: 3vw 3vw;
+  border-radius: 50%;
+  font-size: 2.8vw;
+}
+
+.page3-center h5 {
+  text-transform: uppercase;
+  background-color: #fff;
+  padding: 1vh 1.5vh;
+  color: #111;
+  font-size: 1.5vh;
+  border-radius: 10px;
+  opacity: 0;
+  transition: all ease 0.5s;
+  transform: translateY(20%);
+}
+
+.page3-center:hover h5{
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+.page3 video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  transform: scaleX(0.7) scaleY(0);
+  opacity: 0;
+  border-radius: 30px;
+}

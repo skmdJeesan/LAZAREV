@@ -14,7 +14,7 @@ function navAnimation() {
   gsap.to(nav, {
     height: "6vh",
     borderBottom: "0.7px solid rgb(118, 117, 117)",
-    ease: 'power2.inout',
+    ease: "power2.inout",
     scrollTrigger: {
       trigger: nav,
       scroller: "body",
@@ -43,28 +43,52 @@ function videoconAnimation() {
   });
 }
 
-function page2Animation(){
-  let elems = document.querySelectorAll('.elem');
+function page2Animation() {
+  let elems = document.querySelectorAll(".elem");
   //let elemImg = document.querySelector('.elem img');
 
-  elems.forEach(function(elem){
-    let img = elem.childNodes[5]
-    elem.addEventListener('mouseenter', function(){
-      gsap.to(img, {opacity: 1, scale: 1,})
-    })
-    elem.addEventListener('mousemove', function(e){
+  elems.forEach(function (elem) {
+    let img = elem.childNodes[5];
+    elem.addEventListener("mouseenter", function () {
+      gsap.to(img, { opacity: 1, scale: 1 });
+    });
+    elem.addEventListener("mousemove", function (e) {
       gsap.to(img, {
         y: e.y - elem.getBoundingClientRect().y - 80,
         x: e.x - elem.getBoundingClientRect().x - 80,
-      })
-    })
-    elem.addEventListener('mouseleave', function(){
-      gsap.to(img, {opacity: 0, scale: 0,})
-    })
-  })
+      });
+    });
+    elem.addEventListener("mouseleave", function () {
+      gsap.to(img, { opacity: 0, scale: 0 });
+    });
+  });
+}
+
+function page3videoAnimation() {
+  let playBtn = document.querySelector(".page3-center");
+  let video = document.querySelector(".page3 video");
+
+  playBtn.addEventListener("click", function () {
+    video.play();
+    gsap.to(video, {
+      transform: "scaleX(1) scaleY(1)",
+      opacity: 1,
+      borderRadius: 0,
+      // zIndex: 99,
+    });
+  });
+
+  video.addEventListener("click", function () {
+    video.pause();
+    gsap.to(video, {
+      transform: "scaleX(0.7) scaleY(0)",
+      opacity: 0,
+      borderRadius: "30px",
+    });
+  });
 }
 
 navAnimation();
 //videoconAnimation();
 page2Animation();
-
+page3videoAnimation();
