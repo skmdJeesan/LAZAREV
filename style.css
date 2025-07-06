@@ -28,6 +28,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   transition: all ease-in 0.2s;
+  z-index: 1;
   /* border-bottom: 1px solid #929090; */
 }
 
@@ -265,4 +266,60 @@ nav {
   height: 100vh;
   width: 100%;
   background-color: #111;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-top: 1px solid #dadada;
 }
+
+.page2-left {
+  height: 85%;
+  width: 28%;
+  /* background-color: red; */
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-top: 8vh;
+  padding-left: 1vw;
+  padding-bottom: 1vh;
+  
+}
+
+.up p {font-size: 1.8vh; color: #d3d1d1;}
+.down h5 {font-weight: 400; font-size: 2.2vh; line-height: 1.3; color: #d3d1d1;}
+
+.page2-right {
+  height: 85%;
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+}
+
+.page2-right .elem {
+  height: 25%;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 4vh 0;
+  padding-bottom: 7vh;
+  border-bottom: 1px solid #dadada;
+  position: relative;
+}
+
+.elem img {
+  height: 7vw;
+  width: 7.2vw;
+  position: absolute;
+  object-fit: cover;
+  border-radius: 50%;
+  opacity: 0;
+  scale: 0;
+  transform: translate(-50%,-50%);
+}
+
+.elem-left {width: 70%; font-size: 2.2vh;}
+.elem-left h2 {font-weight: 400;}
+.elem-right {display: flex; align-items: center; gap: 3vh;}
+.elem-right p {font-size: 1.8vh; color: #6e6d6d;}
