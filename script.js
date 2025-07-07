@@ -1,7 +1,8 @@
 function navAnimation() {
   let icon = document.querySelector(".what .part1 .icon");
   let whatDiv = document.querySelector(".what");
-  let nav = document.querySelector(".nav-content");
+  let navContent = document.querySelector(".nav-content");
+  let nav = document.querySelector("nav");
 
   whatDiv.addEventListener("mouseenter", () => {
     icon.innerHTML = `<i class="ri-arrow-up-s-line"></i>`;
@@ -11,9 +12,22 @@ function navAnimation() {
     icon.innerHTML = `<i class="ri-arrow-down-s-line"></i>`;
   });
 
-  gsap.to(nav, {
+  gsap.to(navContent, {
     height: "7vh",
     borderBottom: "0.7px solid rgb(118, 117, 117)",
+    ease: "power2.inout",
+    scrollTrigger: {
+      trigger: navContent,
+      scroller: "body",
+      markers: false,
+      start: "top 0%",
+      end: "top -30%",
+      scrub: true,
+    },
+  });
+
+  gsap.to(nav, {
+    height: "7vh",
     ease: "power2.inout",
     scrollTrigger: {
       trigger: nav,
@@ -88,10 +102,10 @@ function page3videoAnimation() {
   });
 }
 
-function navBtnAnimation(){
-  let btn = document.querySelector('.nav-right-btn')
-  let txt = btn.querySelector('span')       // wrap your text in a <span>
-  let icon = btn.querySelector('i')
+function navBtnAnimation() {
+  let btn = document.querySelector(".nav-right-btn");
+  let txt = btn.querySelector("span"); // wrap your text in a <span>
+  let icon = btn.querySelector("i");
 
   // btn.addEventListener('mouseenter', () => {
   //   txt.textContent = "Let's talk"
@@ -116,28 +130,57 @@ function navBtnAnimation(){
   // Create a master timeline and pause it
   const hoverTl = gsap.timeline({ paused: true });
 
-  hoverTl.to(btn, {
-      backgroundColor: "#111",
-      color: "#0ba34e",
-      duration: 0.1,
-      // gap: '10px',
-    }, 0)
-    .to(txt, {color: '#0ba34e'}, 0)
-    .to(icon, {
-      backgroundColor: "#0ba34e",
-      padding: "8px 16px",
-      borderRadius: "20px",
-      duration: 0.2,
-      ease: 'power3.in'
-    }, 0)
-    .to(icon, {
-      className: "ri-arrow-right-up-line",
-      duration: 0.9 // instant class swap at start
-    }, 0);
+  hoverTl
+    .to(
+      btn,
+      {
+        backgroundColor: "#111",
+        color: "#0ba34e",
+        duration: 0.1,
+        // gap: '10px',
+      },
+      0
+    )
+    .to(txt, { color: "#0ba34e" }, 0)
+    .to(
+      icon,
+      {
+        backgroundColor: "#0ba34e",
+        padding: "8px 16px",
+        borderRadius: "20px",
+        duration: 0.2,
+        ease: "power3.in",
+      },
+      0
+    )
+    .to(
+      icon,
+      {
+        className: "ri-arrow-right-up-line",
+        duration: 0.9, // instant class swap at start
+      },
+      0
+    );
 
   btn.addEventListener("mouseenter", () => hoverTl.play());
   btn.addEventListener("mouseleave", () => hoverTl.reverse());
+}
 
+function page5Animation(){
+  let sections = document.querySelectorAll(".sec-right");
+
+  sections.forEach(function (elem) {
+    // elem -> sec-right
+    let video = elem.childNodes[3];
+    elem.addEventListener("mouseenter", function () {
+      video.style.opacity = 1;
+      video.play();
+    });
+    elem.addEventListener("mouseleave", function () {
+      video.style.opacity = 0;
+      video.load();
+    });
+  });
 }
 
 navAnimation();
@@ -145,4 +188,6 @@ navBtnAnimation();
 //videoconAnimation();
 page2Animation();
 page3videoAnimation();
+page5Animation();
+
 

@@ -190,7 +190,7 @@ nav {
   padding: 4px 6px;
   border-radius: 50px;
   font-weight: 400;
-  margin-bottom: 15vh;
+  margin-bottom: 10vh;
 }
 
 /* .video-container {
@@ -227,7 +227,7 @@ nav {
 
 #moving-div {
   position: absolute;
-  bottom: 3%;
+  bottom: 6%;
   white-space: nowrap;
   padding: 1.2vw;
   overflow: hidden;
@@ -434,3 +434,61 @@ nav {
   line-height: 1.35;
   color: #111;
 }
+
+.page5 {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #fff;
+  padding: 0 6vw;
+  color: #111;
+}
+
+.page5 .sec {
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10vh;
+}
+
+.sec-left {
+  height: 100%;
+  width: 22%;
+  border-top: 1px solid #dadada;
+}
+
+.sec-left span {
+  display: flex;
+  align-items: center;
+  gap: 2.5vh;
+  padding-top: 5vh;
+  padding-bottom: 12vh;
+}
+
+.sec-left span h1 {color: #111; font-weight: 500;}
+.sec-left span i {font-size: 2.5vh; color: #111;}
+.sec-left p {color: #111;}
+
+.sec-right {
+  height: 100%;
+  width: 70%;
+  position: relative;
+}
+
+.sec-right img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+} 
+
+.sec-right video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity ease 0.1s;
+} 
