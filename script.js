@@ -44,7 +44,7 @@ function videoconAnimation() {
 }
 
 function page2Animation() {
-  let elems = document.querySelectorAll(".elem");
+  let elems = document.querySelectorAll(".page2 .elem");
   //let elemImg = document.querySelector('.elem img');
 
   elems.forEach(function (elem) {
