@@ -1,7 +1,7 @@
 function navAnimation() {
   let icon = document.querySelector(".what .part1 .icon");
   let whatDiv = document.querySelector(".what");
-  let nav = document.querySelector("nav");
+  let nav = document.querySelector(".nav-content");
 
   whatDiv.addEventListener("mouseenter", () => {
     icon.innerHTML = `<i class="ri-arrow-up-s-line"></i>`;
@@ -12,7 +12,7 @@ function navAnimation() {
   });
 
   gsap.to(nav, {
-    height: "6vh",
+    height: "7vh",
     borderBottom: "0.7px solid rgb(118, 117, 117)",
     ease: "power2.inout",
     scrollTrigger: {
