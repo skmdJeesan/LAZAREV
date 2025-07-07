@@ -88,7 +88,61 @@ function page3videoAnimation() {
   });
 }
 
+function navBtnAnimation(){
+  let btn = document.querySelector('.nav-right-btn')
+  let txt = btn.querySelector('span')       // wrap your text in a <span>
+  let icon = btn.querySelector('i')
+
+  // btn.addEventListener('mouseenter', () => {
+  //   txt.textContent = "Let's talk"
+  //   icon.className = 'ri-arrow-right-up-line'
+  //   icon.style.backgroundColor = '#0ba34e'
+  //   icon.style.padding = '10px 14px'
+  //   icon.style.borderRadius = '20px'
+  //   btn.style.color = '#0ba34e'
+  //   btn.style.backgroundColor = '#111'
+  // })
+
+  // btn.addEventListener('mouseleave', () => {
+  //   txt.textContent = "Let's talk"
+  //   icon.className = 'ri-pencil-fill'
+  //   icon.style.backgroundColor = 'transparent'
+  //   icon.style.padding = '0'
+  //   icon.style.borderRadius = '0'
+  //   btn.style.color = 'white'
+  //   btn.style.backgroundColor = '#0ba34e'
+  // })
+
+  // Create a master timeline and pause it
+  const hoverTl = gsap.timeline({ paused: true });
+
+  hoverTl.to(btn, {
+      backgroundColor: "#111",
+      color: "#0ba34e",
+      duration: 0.1,
+      // gap: '10px',
+    }, 0)
+    .to(txt, {color: '#0ba34e'}, 0)
+    .to(icon, {
+      backgroundColor: "#0ba34e",
+      padding: "8px 16px",
+      borderRadius: "20px",
+      duration: 0.2,
+      ease: 'power3.in'
+    }, 0)
+    .to(icon, {
+      className: "ri-arrow-right-up-line",
+      duration: 0.9 // instant class swap at start
+    }, 0);
+
+  btn.addEventListener("mouseenter", () => hoverTl.play());
+  btn.addEventListener("mouseleave", () => hoverTl.reverse());
+
+}
+
 navAnimation();
+navBtnAnimation();
 //videoconAnimation();
 page2Animation();
 page3videoAnimation();
+
