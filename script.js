@@ -239,6 +239,21 @@ function page6Animation(){
 
 }
 
+function page7Animation() {
+  gsap.from('.page7 .bottom .elm h4', {
+    x: 0,
+    duration: 1,
+    scrollTrigger: {
+      trigger: '.page7 .bottom .elm h4',
+      scroller: 'body',
+      markers: false,
+      start: 'top 70%',
+      end: 'top 0%',
+      scrub: 2,
+    }
+  })
+}
+
 navAnimation();
 navBtnAnimation();
 //videoconAnimation();
@@ -246,4 +261,7 @@ page2Animation();
 page3videoAnimation();
 page5Animation();
 page6Animation();
+page7Animation();
+
+
 
