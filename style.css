@@ -23,7 +23,7 @@ nav {
   background: #111;
   height: 10vh;
   padding: 0 6vw;
-  z-index: 1;
+  z-index: 9;
 }
 
 .nav-content {
@@ -449,7 +449,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 10vh;
+  padding-bottom: 10vh;
 }
 
 .sec-left {
@@ -492,3 +492,174 @@ nav {
   opacity: 0;
   transition: opacity ease 0.1s;
 } 
+
+.page6 {
+  /* margin-top: 10vh; */
+  min-height: 100vh;
+  width: 100%;
+  background-color: #111;
+  position: relative;
+  padding: 6vh 6vw;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.9s;
+}
+
+.page6>h2 {
+  padding-left: 24vw;
+  padding-top: 6vh;
+  font-size: 9vh;
+  letter-spacing: -1px;
+  font-weight: 700;
+  line-height: 0.95;
+  margin-bottom: 10vh;
+}
+
+.hero {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.9s;
+}
+
+.page6 .hero>button {
+  background-color: #0ba34e;
+  border: none;
+  padding: 1vw 3vw;
+  font-size: 1vw;
+  font-weight: 800;
+  border-radius: 50px;
+  text-transform: uppercase;
+  position: sticky;
+  top: 10%;
+}
+
+.hero>button span {margin-left: 1vh; font-size: 1.4vw;}
+
+.hero-right {
+  width: 72%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.9s;
+}
+
+.hero-right>p {
+  font-size: 2.3vw;
+  margin-bottom: 10vh;
+}
+
+.hero-right .services{
+  width: 100%;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.9s;
+  position: relative;
+}
+
+summary::marker {content: "";}
+summary:hover .part1{background-color: transparent;}
+
+.uiux {border-top: 1px solid #222;}
+.product {border-top: 1px solid #222;}
+
+.services .part1 {cursor: pointer;}
+
+.services .part1 span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2vh;
+  padding-bottom: 4vh;
+}
+
+.services .part1 span h3 {
+  font-size: 3vw;
+  font-weight: 700;
+}
+
+.services .part1 span i {
+  padding: 1vh 1vh;
+  font-size: 2.5vw;
+  font-weight: 500;
+  border: 1px solid #444;
+  border-radius: 50px;
+}
+
+.services .part1 .tags {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4vh;
+}
+
+.services .part1 .tags h5 {
+  border: 1px solid #444;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 1.8vh;
+}
+
+.services .part2 .elem {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+  padding-top: 3vh;
+  padding-bottom: 9vh;
+  position: relative;
+  z-index: 8;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.9s;
+  overflow: hidden;
+}
+
+.services .part2 .elem .over {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background-color: #444;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.9s;
+}
+
+.services .part2 .elem p {
+  width: 58%;
+  font-size: 2vh;
+  position: relative;
+  z-index: 8;
+}
+
+.services .part2 .elem h3 {
+  width: 20%;
+  position: relative;
+  z-index: 8;
+}
+
+.services .part2 .elem i {
+  position: relative;
+  z-index: 8;
+}
+
+.services .part2 .elem:hover {
+  border-top: 2px solid white;
+}
+
+.services .part2 .elem:hover .over{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.services .part2 .elem:hover h3{
+  padding-left: 1vh;
+}
+
+.services .part2 .elem:hover i{
+  padding-right: 1vh;
+}
+
+
+.page7 {
+  height: 100vh;
+  width: 100%;
+  background-color:#fff;
+}
