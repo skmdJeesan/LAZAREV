@@ -324,12 +324,12 @@ function page6Animation(){
 function page7Animation() {
   gsap.from('.page7 .bottom .elm h4', {
     x: 0,
-    duration: 1,
+    duration: 1.5,
     scrollTrigger: {
       trigger: '.page7 .bottom .elm h4',
       scroller: '#main',
       markers: false,
-      start: 'top 70%',
+      start: 'top 50%',
       end: 'top 0%',
       scrub: 2,
     }
