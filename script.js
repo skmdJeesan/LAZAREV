@@ -52,7 +52,14 @@ function loadingAnimation(){
     opacity: 0,
     delay: -0.2
   })
-  tl.from(".page1 h1, .page1 p, .page1 div", {
+  tl.from('.page1 h1', {
+    opacity: 0,
+    //y: 60,
+    //scale: 0.7,
+    transform: 'translateY(-20%)',
+    duration: 0.5,
+  })
+  tl.from(".page1 p, .page1 div", {
     opacity: 0,
     duration: 0.5,
     stagger: 0.2,
@@ -329,6 +336,22 @@ function page7Animation() {
   })
 }
 
+function page8Animation(){
+  gsap.from('.page8 h1', {
+    opacity: 0,
+    y: '10vh',
+    duration: 1,
+    scrollTrigger: {
+      trigger: '.page8 h1',
+      scroller: '#main',
+      markers: false,
+      start: 'top 80%',
+      end: 'top 10%',
+      scrub: 2,
+    }
+  })
+}
+
 locomotiveAnimation();
 loadingAnimation();
 navAnimation();
@@ -339,6 +362,9 @@ page3videoAnimation();
 page5Animation();
 page6Animation();
 page7Animation();
+page8Animation();
+
+
 
 
 
