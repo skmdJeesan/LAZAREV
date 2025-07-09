@@ -255,14 +255,14 @@ function page6Animation(){
   let icon1 = document.querySelector('.uiux details summary span i')
   let summary1 = document.querySelector('.uiux details summary')
 
-  let flag1 = "down"
+  let flag1 = "up"
   summary1.addEventListener('click', function(){
-    if(flag1 === "down") {
-      icon1.className = `ri-arrow-drop-up-line`
-      flag1 = "up"
-    } else {
+    if(flag1 === "up") {
       icon1.className = `ri-arrow-drop-down-line`
       flag1 = "down"
+    } else {
+      icon1.className = `ri-arrow-drop-up-line`
+      flag1 = "up"
     }
   })
 
