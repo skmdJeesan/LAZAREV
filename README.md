@@ -1,12 +1,12 @@
 # LAZAREV.com UI/UX Clone
 
-A compact clone of the award-winning [LAZAREV.com](https://lazarev.com) website, built with HTML, CSS, JavaScript, GSAP, ScrollTrigger, and Locomotive Scroll. It showcases responsive layout, smooth animations, and modern UI interactions.
+A compact clone of the award-winning [LAZAREV.com](https://www.lazarev.agency/) website, built with HTML, CSS, JavaScript, GSAP, ScrollTrigger, and Locomotive Scroll. It showcases responsive layout, smooth animations, and modern UI interactions.
 
 ---
 
 ## 🚀 Live Demo
 
-[View it here](https://yourusername.github.io/lazarev-clone)
+[View it here](https://skmdjeesan.github.io/LAZAREV/)
 
 ---
 
@@ -37,6 +37,6 @@ Suggestions and PRs are welcome.
 
 ## 🙏 Thanks To
 
-* [LAZAREV.com](https://lazarev.com)
+* [LAZAREV.com](https://www.lazarev.agency/)
 * [GSAP](https://greensock.com/)
 * [Locomotive Scroll](https://locomotivemtl.github.io/locomotive-scroll/)
