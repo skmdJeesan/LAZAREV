@@ -40,3 +40,4 @@ Suggestions and PRs are welcome.
 * [LAZAREV.com](https://www.lazarev.agency/)
 * [GSAP](https://greensock.com/)
 * [Locomotive Scroll](https://locomotivemtl.github.io/locomotive-scroll/)
+* [Remix Icon](https://remixicon.com/)
