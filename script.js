@@ -1,32 +1,62 @@
 function locomotiveAnimation(){
   gsap.registerPlugin(ScrollTrigger);
 
-  // Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
+    const locoScroll = new LocomotiveScroll({
+        el: document.querySelector("#main"),
+        smooth: true,
 
-  const locoScroll = new LocomotiveScroll({
-    el: document.querySelector("#main"),
-    smooth: true
-  });
-  // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
-  locoScroll.on("scroll", ScrollTrigger.update);
+        // for tablet smooth
+        tablet: { smooth: true },
 
-  // tell ScrollTrigger to use these proxy methods for the "#main" element since Locomotive Scroll is hijacking things
-  ScrollTrigger.scrollerProxy("#main", {
-    scrollTop(value) {
-      return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
-    }, // we don't have to define a scrollLeft because we're only scrolling vertically.
-    getBoundingClientRect() {
-      return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
-    },
-    // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
-    pinType: document.querySelector("#main").style.transform ? "transform" : "fixed"
-  });
+        // for mobile
+        smartphone: { smooth: true }
+    });
+    locoScroll.on("scroll", ScrollTrigger.update);
 
-  // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
-  ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-  // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
-  ScrollTrigger.refresh();
+    ScrollTrigger.scrollerProxy("#main", {
+        scrollTop(value) {
+            return arguments.length
+                ? locoScroll.scrollTo(value, 0, 0)
+                : locoScroll.scroll.instance.scroll.y;
+        },
+        getBoundingClientRect() {
+            return {
+                top: 0,
+                left: 0,
+                width: window.innerWidth,
+                height: window.innerHeight
+            };
+        }
+    });
 
+    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+
+    ScrollTrigger.refresh();
+
+}
+
+function loadingAnimation(){
+  let tl = gsap.timeline()
+  tl.from(".page1", {
+    opacity: 0,
+    duration: 0.2,
+    delay: 0.2
+  })
+  tl.from('.page1', {
+    duration: 2,
+    transform: 'scaleX(0.7) scaleY(0.2) translateY(80%)',
+    // borderRadius: "50px",
+    ease: 'expo.out',
+  })
+  tl.from("nav", {
+    opacity: 0,
+    delay: -0.2
+  })
+  tl.from(".page1 h1, .page1 p, .page1 div", {
+    opacity: 0,
+    duration: 0.5,
+    stagger: 0.2,
+  })
 }
 
 function navAnimation() {
@@ -49,7 +79,7 @@ function navAnimation() {
     ease: "power2.inout",
     scrollTrigger: {
       trigger: navContent,
-      scroller: "body",
+      scroller: "#main",
       markers: false,
       start: "top 0%",
       end: "top -30%",
@@ -62,7 +92,7 @@ function navAnimation() {
     ease: "power2.inout",
     scrollTrigger: {
       trigger: nav,
-      scroller: "body",
+      scroller: "#main",
       markers: false,
       start: "top 0%",
       end: "top -30%",
@@ -268,6 +298,20 @@ function page6Animation(){
     }
   })
 
+  gsap.to('.uiux .part1 i', {
+    backgroundColor: '#444',
+    ease: 'expo.out',
+    duration: 0.2,
+    scrollTrigger: {
+      trigger: '.uiux .part1 i',
+      scroller: '#main',
+      markers: false,
+      start: 'top 70%',
+      end: 'top 0%',
+      scrub: 2,
+    }
+  })
+
 }
 
 function page7Animation() {
@@ -286,6 +330,7 @@ function page7Animation() {
 }
 
 locomotiveAnimation();
+loadingAnimation();
 navAnimation();
 navBtnAnimation();
 //videoconAnimation();
@@ -294,6 +339,8 @@ page3videoAnimation();
 page5Animation();
 page6Animation();
 page7Animation();
+
+
 
 
 
