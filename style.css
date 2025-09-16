@@ -45,6 +45,19 @@ nav {
   color: #0ba34e;
 }
 
+.nav-content .icons {display: none;}
+.icons .icon {background-color: #333; height: 30px; width: 30px; border-radius: 50px; display: flex; align-items: center; justify-content: center;}
+#edit {background-color: #0ba34e;}
+
+
+@media (max-width: 700px) {
+  nav {padding: 0 2vh; height: 2vh;}
+  .nav-content {padding: 1.5vh 0;}
+  .nav-content .logo h1 {font-size: 20px;}
+  .nav-right {display: none;}
+  .nav-content .icons {display: block; display: flex; gap: 4px;}
+}
+
 /* .what {position: relative;} */
 .what .part1 {
   transition: all ease-in-out 0.2s;
@@ -111,7 +124,7 @@ nav {
 .nav-right a {
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 0.9vw;
+  font-size: 13.5px;
   font-weight: 700;
 }
 
@@ -148,28 +161,27 @@ nav {
   padding: 0 6vw;
 }
 
+.aiml {display: flex; gap: 1.5vw;}
+
 .page1 h1 {
   font-size: 7vw;
   text-transform: uppercase;
   font-weight: 800;
   line-height: 1;
-  letter-spacing: -5px;
+  letter-spacing: -4px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
-.page1 h1 span {
-  font-size: 2vw;
-  padding: 1.6vw 1.8vw;
-  background-color: #0ba34e;
-  border-radius: 50%;
-}
+.page1 h1 span {font-size: 2vw; height: 5.5vw; width: 5.5vw; display: flex; align-items: center; justify-content: center; background-color: #0ba34e; border-radius: 50%;}
 
 .page1 p {
+  width: 35%;
   margin-top: 7vh;
   font-weight: 400;
   text-align: center;
-  font-size: 1vw;
+  font-size: 1.1vw;
 }
 
 .page1-something {
@@ -192,6 +204,16 @@ nav {
   border-radius: 50px;
   font-weight: 400;
   margin-bottom: 10vh;
+}
+
+@media (max-width: 700px) {
+  .page1 {padding: 16vh 2vw;}
+  .aiml {flex-direction: column; gap: 0; align-items: flex-start; width: 100%;}
+  .page1 h1 {font-size: 8vh; letter-spacing: -1px;}
+  .page1 h1 span {height: 6vh; width: 6vh;}
+  .page1 h1 span i{font-size: 2.3vh;}
+  .page1 p {font-size: 1.7vh; width: 90%; margin-top: 15vh;}
+  .page1-something {font-size: 2vh;}
 }
 
 /* .video-container {
@@ -232,7 +254,7 @@ nav {
   white-space: nowrap;
   padding: 1.2vw;
   overflow: hidden;
-  width: 45%;
+  width: 45%; 
 }
 
 #moving-div .move {
@@ -246,6 +268,11 @@ nav {
 #moving-div .move img {
   height: 1.5vw;
   margin: 0 1.2vw;
+}
+
+@media (max-width: 700px) {
+  #moving-div {width: 90%;}
+  #moving-div .move img { height: 2vh;}
 }
 
 @keyframes mobe {
