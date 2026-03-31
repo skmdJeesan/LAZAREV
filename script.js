@@ -352,17 +352,17 @@ function page8Animation(){
   })
 }
 
-locomotiveAnimation();
-loadingAnimation();
-navAnimation();
-navBtnAnimation();
-//videoconAnimation();
-page2Animation();
-page3videoAnimation();
-page5Animation();
-page6Animation();
-page7Animation();
-page8Animation();
+// locomotiveAnimation();
+// loadingAnimation();
+// navAnimation();
+// navBtnAnimation();
+// videoconAnimation();
+// page2Animation();
+// page3videoAnimation();
+// page5Animation();
+// page6Animation();
+// page7Animation();
+// page8Animation();
 
 
 
