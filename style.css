@@ -582,59 +582,6 @@ nav {
   top: 10%;
 }
 
-@media (max-width: 700px) {
-  .page6 {
-    padding: 4vh 2vw;
-  }
-  .page6>h2 {
-    padding-left: 0;
-    padding-top: 4vh;
-    font-size: 6vh;
-    margin-bottom: 5vh;
-  }
-  .hero {
-    flex-direction: column;
-  }
-  .page6 .hero>button {
-    position: static;
-    margin-bottom: 5vh;
-    padding: 2vh 4vh;
-    font-size: 3vh;
-  }
-  .hero>button span {
-    font-size: 3vh;
-  }
-  .hero-right {
-    width: 100%;
-  }
-  .hero-right>p {
-    font-size: 4vh;
-    margin-bottom: 5vh;
-  }
-  .services .part1 span h3 {
-    font-size: 5vh;
-  }
-  .services .part1 span i {
-    font-size: 4vh;
-  }
-  .services .part1 .tags h5 {
-    font-size: 2.5vh;
-  }
-  .services .part2 .elem {
-    flex-direction: column;
-    padding-top: 2vh;
-    padding-bottom: 6vh;
-  }
-  .services .part2 .elem p {
-    width: 100%;
-    font-size: 3vh;
-  }
-  .services .part2 .elem h3 {
-    width: 100%;
-    font-size: 4vh;
-  }
-}
-
 .hero>button span {margin-left: 1vh; font-size: 1.4vw;}
 
 .hero-right {
@@ -758,6 +705,77 @@ summary:hover .part1{background-color: transparent;}
 
 .services .part2 .elem:hover i{
   padding-right: 1vh;
+}
+
+@media (max-width: 700px) {
+  .page6 {
+    padding: 4vh 2vw;
+  }
+  .page6>h2 {
+    padding-left: 0;
+    padding-top: 4vh;
+    font-size: 6vh;
+    margin-bottom: 5vh;
+    text-align: center;
+  }
+  .hero {
+    flex-direction: column;
+  }
+  .page6 .hero>button {
+    position: static;
+    margin-bottom: 5vh;
+    padding: 2vh 4vh;
+    font-size: 3vh;
+    align-self: center;
+  }
+  .hero>button span {
+    font-size: 3vh;
+  }
+  .hero-right {
+    width: 100%;
+  }
+  .hero-right>p {
+    font-size: 4vh;
+    margin-bottom: 5vh;
+  }
+  .services .part1 span {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2vh;
+  }
+  .services .part1 span h3 {
+    font-size: 5vh;
+  }
+  .services .part1 span i {
+    font-size: 4vh;
+    align-self: flex-end;
+  }
+  .services .part1 .tags {
+    flex-wrap: wrap;
+    gap: 1vh;
+  }
+  .services .part1 .tags h5 {
+    font-size: 2.5vh;
+    padding: 6px 12px;
+  }
+  .services .part2 .elem {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 2vh;
+    padding-bottom: 6vh;
+    gap: 2vh;
+  }
+  .services .part2 .elem p {
+    width: 100%;
+    font-size: 3vh;
+  }
+  .services .part2 .elem h3 {
+    width: 100%;
+    font-size: 4vh;
+  }
+  .services .part2 .elem i {
+    align-self: flex-end;
+  }
 }
 
 .page7 {
