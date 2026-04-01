@@ -713,65 +713,70 @@ summary:hover .part1{background-color: transparent;}
   }
   .page6>h2 {
     padding-left: 0;
-    padding-top: 4vh;
-    font-size: 6vh;
-    margin-bottom: 5vh;
+    padding-top: 2vh;
+    font-size: 4vh;
+    margin-bottom: 3vh;
     text-align: center;
   }
-  .hero {
-    flex-direction: column;
-  }
+
+  .hero { flex-direction: column; }
+
   .page6 .hero>button {
     position: static;
-    margin-bottom: 5vh;
-    padding: 2vh 4vh;
-    font-size: 3vh;
+    margin-bottom: 3vh;
+    padding: 1vh 2.5vh;
+    font-size: 2vh;
     align-self: center;
   }
   .hero>button span {
-    font-size: 3vh;
+    font-size: 2vh;
   }
   .hero-right {
     width: 100%;
   }
   .hero-right>p {
-    font-size: 4vh;
-    margin-bottom: 5vh;
+    font-size: 2vh;
+    margin-bottom: 3vh;
+    text-align: center;
   }
   .services .part1 span {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 2vh;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
   .services .part1 span h3 {
-    font-size: 5vh;
+    font-size: 3vh;
   }
   .services .part1 span i {
     font-size: 4vh;
-    align-self: flex-end;
+    align-self: center;
+    height: 2rem; width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .services .part1 .tags {
     flex-wrap: wrap;
     gap: 1vh;
   }
   .services .part1 .tags h5 {
-    font-size: 2.5vh;
-    padding: 6px 12px;
+    font-size: 1.5vh;
+    padding: 3px 6px;
   }
   .services .part2 .elem {
     flex-direction: column;
     align-items: flex-start;
     padding-top: 2vh;
-    padding-bottom: 6vh;
+    padding-bottom: 3vh;
     gap: 2vh;
   }
   .services .part2 .elem p {
     width: 100%;
-    font-size: 3vh;
+    font-size: 2vh;
   }
   .services .part2 .elem h3 {
     width: 100%;
-    font-size: 4vh;
+    font-size: 2.5vh;
   }
   .services .part2 .elem i {
     align-self: flex-end;
@@ -864,26 +869,27 @@ summary:hover .part1{background-color: transparent;}
 
 @media (max-width: 700px) {
   .page7 {
-    padding: 10vh 2vw;
+    padding: 6vh 2vw;
   }
   .page7 .up {
     flex-direction: column;
   }
   .up-left {
     width: 100%;
-    margin-bottom: 5vh;
+    margin-bottom: 4vh;
+    line-height: 1;
   }
   .up-left h2 {
-    font-size: 5vh;
+    font-size: 2.5vh;
   }
   .up-right {
     width: 100%;
   }
   .up-right p {
-    font-size: 4vh;
+    font-size: 2.5vh;
   }
   .page7 .bottom {
-    margin-top: 10vh;
+    margin-top: 4vh;
     padding-left: 0;
     flex-direction: column;
     height: auto;
@@ -892,18 +898,32 @@ summary:hover .part1{background-color: transparent;}
     border-left: none;
     border-top: 1px solid #dadada;
     padding-top: 2vh;
-    margin-bottom: 5vh;
+    margin-bottom: 3vh;
   }
   .page7 .bottom .elm h5 {
-    font-size: 2.5vh;
+    font-size: 2vh;
   }
   .page7 .bottom .elm h4 {
     width: auto;
-    font-size: 2.5vh;
+    font-size: 2vh;
   }
   .page7 .bottom .elm h4 span {
-    font-size: 2.5vh;
+    font-size: 2vh;
   }
+
+  #elem1 h4:nth-child(2) {transform: translateX(0);}
+  #elem1 h4:nth-child(3) {transform: translateX(5%);}
+  #elem1 h4:nth-child(4) {transform: translateX(10%);}
+  #elem1 h4:nth-child(5) {transform: translateX(15%);}
+  #elem1 h4:nth-child(6) {transform: translateX(20%);}
+  #elem1 h4:nth-child(7) {transform: translateX(25%);}
+
+  #elem2 h4:nth-child(2) {transform: translateX(0);}
+  #elem2 h4:nth-child(3) {transform: translateX(5%);}
+
+  #elem3 h4:nth-child(2) {transform: translateX(0);}
+  #elem3 h4:nth-child(3) {transform: translateX(5%);}
+  #elem3 h4:nth-child(4) {transform: translateX(10%);}
 }
 
 .page8 {
